@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} TileVana. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} mohibinnovation. All rights reserved.</p>
         </div>
       </div>
     </footer>
