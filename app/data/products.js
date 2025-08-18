@@ -7,7 +7,7 @@ export const products = [
     finish: 'Polished',
     size: '12x24 inch',
     description: 'Elegant and timeless, Calacatta Marble offers a pristine white background with dramatic grey veining. Perfect for creating a luxurious statement in any room.',
-    image: 'https://placehold.co/600x400/f0f0f0/333?text=Calacatta+Marble',
+    image: 'https://img.freepik.com/free-photo/square-interior-floor-tiling-background_53876-74694.jpg?t=st=1755546518~exp=1755550118~hmac=8c7d467b65be2f86eebc391b8a8fd375395ef16de5ef1d21c7be81e1b8e620d9&w=1060',
     gallery: [
       'https://placehold.co/800x600/f0f0f0/333?text=Calacatta+View+1',
       'https://placehold.co/800x600/e8e8e8/333?text=Calacatta+View+2',
@@ -22,7 +22,7 @@ export const products = [
     finish: 'Matte',
     size: '24x24 inch',
     description: 'Achieve an industrial, minimalist aesthetic with this durable porcelain tile that mimics the look of poured concrete. Ideal for modern living spaces and high-traffic areas.',
-    image: 'https://placehold.co/600x400/a9a9a9/fff?text=Concrete+Look',
+    image: 'https://img.freepik.com/free-photo/modern-hexagon-tiled-background_53876-88860.jpg?t=st=1755546589~exp=1755550189~hmac=94f5f9d92585e4dc8de7d34c5436445d48332238539ea46099f541650adcae18&w=1060',
     gallery: [
       'https://placehold.co/800x600/a9a9a9/fff?text=Concrete+View+1',
       'https://placehold.co/800x600/b0b0b0/fff?text=Concrete+View+2',
@@ -37,7 +37,7 @@ export const products = [
     finish: 'Textured',
     size: '8x48 inch',
     description: 'Get the warm, inviting look of natural oak wood with the durability and low maintenance of porcelain. Perfect for living rooms, bedrooms, and even bathrooms.',
-    image: 'https://placehold.co/600x400/d2b48c/333?text=Oak+Wood+Effect',
+    image: 'https://img.freepik.com/free-photo/close-up-marble-textured-tiles_53876-88522.jpg?t=st=1755546642~exp=1755550242~hmac=a0416532ee184e368ffba20a602479df42aaf7495ed4749e3aeed4addaf7ddf4&w=1060',
     gallery: [
       'https://placehold.co/800x600/d2b48c/333?text=Oak+View+1',
       'https://placehold.co/800x600/c8a979/333?text=Oak+View+2',

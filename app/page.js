@@ -3,7 +3,7 @@ import HeroSection from './components/HeroSection';
 import ProductCard from './components/ProductCard';
 import { products } from './data/products';
 import Link from 'next/link';
-
+import { SparklesIcon, ChatBubbleLeftRightIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
 const CategoryCard = ({ name, image }) => (
   <div className="relative rounded-lg overflow-hidden group shadow-lg">
     <img src={image} alt={name} className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500" />
@@ -34,32 +34,9 @@ export default function HomePage() {
     <div>
       <HeroSection />
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white">The TileVana Difference</h2>
-            <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">We are more than just a tile store. We are partners in crafting beautiful, enduring spaces.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-amber-400 mb-2">Unmatched Quality</h3>
-              <p className="text-gray-400">We source only the finest materials from around the world to ensure durability and timeless beauty.</p>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-amber-400 mb-2">Expert Guidance</h3>
-              <p className="text-gray-400">Our experienced team is here to help you choose the perfect tiles for your project, big or small.</p>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-amber-400 mb-2">Vast Selection</h3>
-              <p className="text-gray-400">From classic ceramic to luxurious marble, find the style that perfectly fits your vision and budget.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Featured Products Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-white mb-2">Featured Products</h2>
           <p className="text-center text-gray-400 mb-12">Handpicked selections for the modern home.</p>
@@ -75,6 +52,57 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
+      {/* Why Choose Us Section */}
+ <section className="py-20 bg-slate-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
+            The TileVana Difference
+          </h2>
+          <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
+            We are more than just a tile store. We are partners in crafting beautiful, enduring spaces.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Card 1: Unmatched Quality */}
+          <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
+            <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-amber-400/10">
+              <SparklesIcon className="h-8 w-8 text-amber-400" />
+            </div>
+            <h3 className="text-2xl font-semibold text-white mb-3">Unmatched Quality</h3>
+            <p className="text-gray-400">
+              We source only the finest materials from around the world to ensure durability and timeless beauty.
+            </p>
+          </div>
+
+          {/* Card 2: Expert Guidance */}
+          <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
+            <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-amber-400/10">
+              <ChatBubbleLeftRightIcon className="h-8 w-8 text-amber-400" />
+            </div>
+            <h3 className="text-2xl font-semibold text-white mb-3">Expert Guidance</h3>
+            <p className="text-gray-400">
+              Our experienced team is here to help you choose the perfect tiles for your project, big or small.
+            </p>
+          </div>
+
+          {/* Card 3: Vast Selection */}
+          <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
+            <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-amber-400/10">
+              <Squares2X2Icon className="h-8 w-8 text-amber-400" />
+            </div>
+            <h3 className="text-2xl font-semibold text-white mb-3">Vast Selection</h3>
+            <p className="text-gray-400">
+              From classic ceramic to luxurious marble, find the style that perfectly fits your vision and budget.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      
 
       {/* Inspiration Gallery Section */}
       <section className="py-20 bg-gray-800">
@@ -82,20 +110,20 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">Inspiration Gallery</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="grid gap-4">
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x700/8b5e34/ffffff?text=Kitchen" alt=""/>
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x400/a9a9a9/fff?text=Living+Room" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://images.pexels.com/photos/3741317/pexels-photo-3741317.jpeg" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://img.freepik.com/free-photo/3d-rendering-modern-luxury-hotel-office-reception-meeting-lounge_105762-2015.jpg?t=st=1755545882~exp=1755549482~hmac=947a727d891d945bdb719a68feb23600a94aae15d34a75b8d0e22f4b951bfd34&w=1060" alt=""/>
             </div>
             <div className="grid gap-4">
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x400/f0f0f0/333?text=Bathroom" alt=""/>
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x700/36454F/ffffff?text=Outdoor" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://img.freepik.com/free-photo/3d-rendering-modern-dining-room-living-room-with-luxury-decor_105762-2234.jpg" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://plus.unsplash.com/premium_photo-1674773521430-67912c885d46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2ljaGVuJTIwaW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D" alt=""/>
             </div>
              <div className="grid gap-4">
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x700/006a4e/ffffff?text=Accent+Wall" alt=""/>
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x400/fdfbf5/a69a81?text=Entryway" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1671663606281-44682198255a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFjY2VudCUyMGludGVyaW9yJTIwZGVzaWduJTIwd2l0aCUyMHRpbHN8ZW58MHx8MHx8fDA%3D" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://img.freepik.com/free-photo/modern-beadroom-hotel_1150-17926.jpg?t=st=1755546160~exp=1755549760~hmac=d5eb67231326d63172ea09845d69a00f4156082e176f42fa25d42c9c56bea3a8&w=1060" alt=""/>
             </div>
              <div className="grid gap-4">
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x400/e8e4e1/3b3b3b?text=Commercial" alt=""/>
-                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x700/f5f5f5/333?text=Bedroom" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1723468353909-cfac1564d0e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGtpdGNoZW4lMjBpbnRlcmlvciUyMGRlc2lnbiUyMHdpdGglMjB0aWxzfGVufDB8fDB8fHww" alt=""/>
+                <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://img.freepik.com/premium-photo/bedroom-interior-3d-rendering-photo_580184-16.jpg?ga=GA1.1.541790130.1754208209&semt=ais_hybrid&w=740&q=80" alt=""/>
             </div>
           </div>
         </div>

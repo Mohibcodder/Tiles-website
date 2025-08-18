@@ -20,9 +20,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-200">Contact Us</h4>
             <ul className="mt-4 space-y-2 text-gray-400">
-              <li>123 Tile Street, Cityville, 12345</li>
-              <li>Email: info@tilevana.com</li>
-              <li>Phone: (123) 456-7890</li>
+              <li>Ferozpur Road, Lahore</li>
+              <li>Email: mohibinnovation@gmail.com</li>
+              <li>Phone: +92 321 4190776</li>
             </ul>
           </div>
           <div>

@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
-          src="https://placehold.co/1920x1080/a69a81/1a1a1a?text=."
+          src="https://cdn.pixabay.com/photo/2017/03/28/12/10/chairs-2181947_1280.jpg"
           alt="A luxurious modern bathroom with beautiful tiles"
           onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/1920x1080/333/555?text=Stylish+Interior'; }}
         />
