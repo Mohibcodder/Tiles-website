@@ -144,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-amber-500 text-gray-900">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold">Ready to Start Your Project?</h2>
           <p className="mt-4 max-w-2xl mx-auto">Let our experts help you find the perfect tiles to bring your vision to life. Get in touch for a free consultation.</p>
