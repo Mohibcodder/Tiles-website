@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import Image from 'next/image'; // Import the Next.js Image component
 
 // To use this component, make sure you have React and Tailwind CSS set up in your project.
 // You can export this as the default component for your "About" page route.
@@ -55,11 +56,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
             <div className="lg:col-span-3">
               <div className="relative w-full h-[50vh] rounded-lg overflow-hidden shadow-2xl">
-                <img
+                {/* FIX 1: Replaced <img> with next/image <Image> component */}
+                <Image
                   src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?t=st=1755593075~exp=1755596675~hmac=674f308edd2978cef15a6eddf49d3e53cf4d1146d210b3c0800d69337ecacf85&w=1060"
                   alt="Our Story"
-                  className="w-full h-full object-cover"
-                  onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/800x600/2d3748/718096?text=Image+Not+Found'; }}
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -68,7 +70,8 @@ export default function AboutPage() {
                 <h2 className="text-sm font-bold uppercase tracking-widest text-stone-500 mb-2">Our Story</h2>
                 <h3 className="text-3xl font-serif text-stone-200 mb-4">A Legacy in Tile</h3>
                 <p className="text-stone-400 mb-4 leading-relaxed">
-                  Founded with a passion for exquisite design, Oval Tile Palace began as a small boutique with a grand vision: to bring the world's finest tiles to discerning clients. Our journey has been one of exploration and an unwavering commitment to beauty.
+                  {/* FIX 2: Escaped the apostrophe in "world's" */}
+                  Founded with a passion for exquisite design, Oval Tile Palace began as a small boutique with a grand vision: to bring the world&apos;s finest tiles to discerning clients. Our journey has been one of exploration and an unwavering commitment to beauty.
                 </p>
                 <p className="text-stone-400 leading-relaxed">
                   Today, we are a leading name in the industry, known for our curated collections and exceptional service.
@@ -100,7 +103,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-  
+ 
 
       </div>
     </div>
