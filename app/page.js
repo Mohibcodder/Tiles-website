@@ -127,17 +127,17 @@ export default function HomePage() {
             <TestimonialCard 
               quote="The quality of the tiles is outstanding, and the customer service was top-notch. Our new kitchen floor looks amazing!"
               author="Aisha Khan"
-              location="Mumbai"
+              location="Lahore"
             />
             <TestimonialCard 
               quote="TileVana has an incredible selection. We found the perfect mosaic tiles for our bathroom, and they completely transformed the space."
-              author="Rohan Mehta"
-              location="Delhi"
+              author="Amjad"
+              location="Karachi"
             />
             <TestimonialCard 
               quote="Professional, helpful, and high-quality products. I highly recommend them to anyone looking for premium tiles."
-              author="Priya Sharma"
-              location="Bangalore"
+              author="Mubasir"
+              location="DHA, Lahore"
             />
           </div>
         </div>
