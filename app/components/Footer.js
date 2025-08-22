@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 
 export default function Footer() {
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold text-white">Oval Tile Palace</h3>
+              <Link href="/" className=" font-bold text-white" onClick={() => setIsOpen(false)}>
+              <img
+                width="200px"
+                height="200px"
+                src="/MI.png"
+                alt="Logo"
+                className="invert brightness-0"
+              />
+
+            </Link>
             <p className="mt-2 text-gray-400">Your source for premium quality tiles for every space.</p>
           </div>
           <div>
@@ -21,7 +31,7 @@ export default function Footer() {
             <h4 className="font-semibold text-gray-200">Contact Us</h4>
             <ul className="mt-4 space-y-2 text-gray-400">
               <li>Ferozpur Road, Lahore</li>
-              <li>Email: mohibinnovation@gmail.com</li>
+              <li>Email: ovaltiles@gmail.com</li>
               <li>Phone: +92 321 4190776</li>
             </ul>
           </div>
@@ -35,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} mohibinnovation. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Oval Tiles. All rights reserved.</p>
         </div>
       </div>
     </footer>
