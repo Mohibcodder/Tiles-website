@@ -11,9 +11,9 @@ export default function Footer() {
               <img
                 width="200px"
                 height="200px"
-                src="/MI.png"
+                src="/logo-bg.png"
                 alt="Logo"
-                className="invert brightness-0"
+                className=""
               />
 
             </Link>
