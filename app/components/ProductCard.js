@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProductCard({ product }) {
   return (
-    <div className="group border border-gray-700 rounded-lg overflow-hidden bg-gray-800 hover:shadow-2xl hover:shadow-amber-500/10 transition-shadow duration-300">
+    <div className="group border border-[#3e3e3e] rounded-lg overflow-hidden bg-[#1F1F1F] hover:shadow-2xl hover:shadow-[#D2B76B]/10 transition-shadow duration-300">
       <Link href={`/products/${product.id}`}>
         <div className="relative w-full h-64 bg-gray-700">
            <img
@@ -18,7 +18,7 @@ export default function ProductCard({ product }) {
           <p className="text-gray-400 mt-1">{product.category}</p>
           <div className="mt-4 flex justify-between items-center">
             <p className="text-xl font-bold text-white">${product.price}</p>
-            <span className="text-amber-500 font-semibold">View Details &rarr;</span>
+            <span className="text-[#D2B76B] font-semibold">View Details &rarr;</span>
           </div>
         </div>
       </Link>

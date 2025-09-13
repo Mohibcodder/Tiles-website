@@ -8,13 +8,13 @@ import { SparklesIcon, ChatBubbleLeftRightIcon, Squares2X2Icon } from '@heroicon
 
 
 const TestimonialCard = ({ quote, author, location }) => (
-  <div className="bg-gray-800 p-8 rounded-lg shadow-lg relative h-full flex flex-col">
+  <div className="bg-[#121212] p-8 rounded-lg shadow-lg relative h-full flex flex-col">
     <svg className="absolute top-4 left-4 w-10 h-10 text-gray-700" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
       <path d="M9.333 22.583c0 2.25-1.042 3.375-3.125 3.375-2.083 0-3.125-1.125-3.125-3.375 0-2.167 1.042-3.25 3.125-3.25 2.083 0 3.125 1.083 3.125 3.25zM25.333 22.583c0 2.25-1.042 3.375-3.125 3.375-2.083 0-3.125-1.125-3.125-3.375 0-2.167 1.042-3.25 3.125-3.25 2.083 0 3.125 1.083 3.125 3.25zM12.5 6.25h-10v10h10v-10zM28.5 6.25h-10v10h10v-10z"></path>
     </svg>
     <blockquote className="text-gray-300 italic z-10 relative flex-grow">&ldquo;{quote}&rdquo;</blockquote>
     <div className="mt-4 text-right">
-      <p className="font-semibold text-amber-400">- {author}</p>
+      <p className="font-semibold text-[#D2B76B]">- {author}</p>
       <p className="text-sm text-gray-400">{location}</p>
     </div>
   </div>
@@ -28,17 +28,17 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Featured Products Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-[#121212]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-white mb-2">Featured Products</h2>
-          <p className="text-center text-gray-400 mb-12">Handpicked selections for the modern home.</p>
+          <p className="text-center text-[#D2B76B] mb-12">Handpicked selections for the modern home.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/products" className="bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition duration-300">
+            <Link href="/products" className="bg-[#D2B76B] text-black font-bold py-3 px-8 rounded-lg hover:bg-[#d4b45a] transition duration-300">
               View All Products
             </Link>
           </div>
@@ -46,22 +46,22 @@ export default function HomePage() {
       </section>
       
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-[#1F1F1F]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
               The TileVana Difference
             </h2>
-            <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-[#D2B76B] max-w-3xl mx-auto">
               We are more than just a tile store. We are partners in crafting beautiful, enduring spaces.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Card 1: Unmatched Quality */}
-            <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
-              <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-amber-400/10">
-                <SparklesIcon className="h-8 w-8 text-amber-400" />
+            <div className="bg-[#121212] p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
+              <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-[#D2B76B]/10">
+                <SparklesIcon className="h-8 w-8 text-[#D2B76B]" />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-3">Unmatched Quality</h3>
               <p className="text-gray-400">
@@ -70,9 +70,9 @@ export default function HomePage() {
             </div>
 
             {/* Card 2: Expert Guidance */}
-            <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
-              <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-amber-400/10">
-                <ChatBubbleLeftRightIcon className="h-8 w-8 text-amber-400" />
+            <div className="bg-[#121212] p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
+              <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-[#D2B76B]/10">
+                <ChatBubbleLeftRightIcon className="h-8 w-8 text-[#D2B76B]" />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-3">Expert Guidance</h3>
               <p className="text-gray-400">
@@ -81,9 +81,9 @@ export default function HomePage() {
             </div>
 
             {/* Card 3: Vast Selection */}
-            <div className="bg-slate-800/50 p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
-              <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-amber-400/10">
-                <Squares2X2Icon className="h-8 w-8 text-amber-400" />
+            <div className="bg-[#121212] p-8 rounded-xl shadow-lg transform hover:scale-105 hover:shadow-amber-500/10 transition-all duration-300 text-center">
+              <div className="mb-5 inline-flex items-center justify-center h-16 w-16 rounded-full bg-[#D2B76B]/10">
+                <Squares2X2Icon className="h-8 w-8 text-[#D2B76B]" />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-3">Vast Selection</h3>
               <p className="text-gray-400">
@@ -95,7 +95,7 @@ export default function HomePage() {
       </section>
 
       {/* Inspiration Gallery Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-[#121212]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Inspiration Gallery</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -120,7 +120,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-[#1F1F1F]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-white mb-12">What Our Customers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -144,12 +144,12 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-[#121212]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold">Ready to Start Your Project?</h2>
           <p className="mt-4 max-w-2xl mx-auto">Let our experts help you find the perfect tiles to bring your vision to life. Get in touch for a free consultation.</p>
           <div className="mt-8">
-            <Link href="/contact" className="bg-gray-900 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-800 transition duration-300">
+            <Link href="/contact" className="bg-[#D2B76B] text-black font-bold py-3 px-8 rounded-lg hover:bg-[#d4b45a] transition duration-300">
               Contact Us Today
             </Link>
           </div>

@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@keyframes scrollDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    /* Neeche anay ke liye -50% tak move karein */
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    /* Upar janay ke liye 0% tak move karein */
+    transform: translateY(0);
+  }
+}
