@@ -1,19 +1,23 @@
+// app/products/page.js
+
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation'; 
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
 export default function ProductsPage() {
   // --- STATE MANAGEMENT ---
   const [filteredProducts, setFilteredProducts] = useState(products);
-  const [activeCategory, setActiveCategory] = useState(''); // Main category e.g., 'Tiles'
-  const [activeSubFilter, setActiveSubFilter] = useState(''); // Active sub-category filter
+  const [activeCategory, setActiveCategory] = useState('');
+  const [activeSubFilter, setActiveSubFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   // --- DYNAMIC FILTER OPTIONS ---
+  // This is the line that was missing
   const mainCategories = [...new Set(products.map(p => p.mainCategory))];
   
-  // Simplified logic: This now works for ALL categories, including Tiles.
   let subFilterOptions = [];
   if (activeCategory) {
     const allSubCategories = products
@@ -22,32 +26,52 @@ export default function ProductsPage() {
     subFilterOptions = [...new Set(allSubCategories)];
   }
 
-  // --- FILTERING LOGIC ---
+  // --- HOOKS ---
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const initialSearch = searchParams.get('search');
+    if (initialSearch) {
+      setSearchTerm(initialSearch);
+    }
+  }, [searchParams]);
+
   useEffect(() => {
     let tempProducts = products;
 
-    // 1. Filter by main category
     if (activeCategory) {
       tempProducts = tempProducts.filter(p => p.mainCategory === activeCategory);
     }
     
-    // 2. Apply sub-filter (This now works for ALL categories)
     if (activeSubFilter) {
       tempProducts = tempProducts.filter(p => p.subCategory === activeSubFilter);
     }
 
+    if (searchTerm) {
+      const lowercasedTerm = searchTerm.toLowerCase();
+      tempProducts = tempProducts.filter(product => 
+        product.name.toLowerCase().includes(lowercasedTerm) ||
+        product.mainCategory.toLowerCase().includes(lowercasedTerm) ||
+        product.subCategory.toLowerCase().includes(lowercasedTerm)
+      );
+    }
+
     setFilteredProducts(tempProducts);
 
-  }, [activeCategory, activeSubFilter]);
+  }, [activeCategory, activeSubFilter, searchTerm]);
 
   // --- HANDLER FUNCTIONS ---
   const handleCategoryClick = (category) => {
     setActiveCategory(prev => prev === category ? '' : category);
-    setActiveSubFilter(''); // Reset sub-filter when main category changes
+    setActiveSubFilter('');
   };
 
   const handleSubFilterClick = (filter) => {
-    setActiveSubFilter(prev => prev === filter ? '' : filter); // Toggle on/off
+    setActiveSubFilter(prev => prev === filter ? '' : filter);
+  };
+  
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
   };
 
   return (
@@ -59,7 +83,6 @@ export default function ProductsPage() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* --- SIDEBAR --- */}
           <aside className="w-full lg:w-1/4 xl:w-1/5">
             <div className="sticky top-24 bg-gray-800 p-6 rounded-xl shadow-lg">
               <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-3">Categories</h2>
@@ -78,9 +101,17 @@ export default function ProductsPage() {
             </div>
           </aside>
 
-          {/* --- MAIN CONTENT (FILTERS + PRODUCTS) --- */}
           <main className="w-full lg:w-3/4 xl:w-4/5">
-            {/* Sub-filters section */}
+            <div className="mb-8">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                placeholder="Search by name, category, or type..."
+                className="w-full px-4 py-3 bg-gray-800 text-white border-2 border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+              />
+            </div>
+          
             {activeCategory && subFilterOptions.length > 0 && (
               <div className="bg-gray-800 p-4 rounded-xl mb-8 shadow-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-300">Refine Your Search</h3>
@@ -98,7 +129,6 @@ export default function ProductsPage() {
               </div>
             )}
             
-            {/* Product Grid */}
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
                 {filteredProducts.map((product) => (
@@ -108,7 +138,7 @@ export default function ProductsPage() {
             ) : (
               <div className="text-center py-16 bg-gray-800 rounded-xl">
                 <p className="text-2xl text-gray-400">No Products Found</p>
-                <p className="text-gray-500 mt-2">Please adjust your filters or select a category.</p>
+                <p className="text-gray-500 mt-2">Please adjust your filters or try a different search term.</p>
               </div>
             )}
           </main>
