@@ -4,10 +4,10 @@ export const products = [
     id: '1',
     name: 'Calacatta Marble Tile',
     mainCategory: 'Tiles',
-    price: 79.99,
+    price: 1000,
     subCategory: 'Polished', 
     size: '12x24 inch',
-    description: 'Elegant and timeless, Calacatta Marble offers a pristine white background with dramatic grey veining.',
+    description: 'The Calacatta Marble Tile is a premium choice in the Tiles category, perfect for those seeking timeless beauty and sophistication. Belonging to the Polished sub-category, it features a glossy, mirror-like finish that enhances the elegance of any space. Its 12x24 inch size makes it versatile for both walls and floors, offering a modern yet classic appeal. With a pristine white background accented by bold grey veining',
     image: '/tile1.jpg',
     gallery: [
       '/tile2.jpg',
