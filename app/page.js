@@ -149,7 +149,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold">Ready to Start Your Project?</h2>
           <p className="mt-4 max-w-2xl mx-auto">Let our experts help you find the perfect tiles to bring your vision to life. Get in touch for a free consultation.</p>
           <div className="mt-8">
-            <Link href="/contact" className="bg-[#D2B76B] text-black font-bold py-3 px-8 rounded-lg hover:bg-[#d4b45a] transition duration-300">
+            <Link href="/contact" className="bg-[#D2B76B] text-black hover:bg-[#d4b45a] transition duration-300 font-bold py-3 px-8 rounded-lg ">
               Contact Us Today
             </Link>
           </div>

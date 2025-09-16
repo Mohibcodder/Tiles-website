@@ -2,7 +2,7 @@ import Image from 'next/image'; // 1. Import the Image component
 
 export default function ContactPage() {
   return (
-    <div className="bg-gray-900 py-16">
+    <div className="bg-[#121212] py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white">Contact Us</h1>
@@ -12,22 +12,22 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-white mb-6">Send a Message</h2>
+          <div className="bg-[#1F1F1F] p-8 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-semibold text-white mb-6">Send a <span className='text-[#D2B76B]'>Message</span></h2>
             <form>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-300 font-medium mb-2">Name</label>
-                <input type="text" id="name" name="name" className="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required />
+                <input type="text" id="name" name="name" className="w-full px-4 py-2 bg-[#121212] border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D2B76B]" required />
               </div>
               <div className="mb-4">
                 <label htmlFor="email" className="block text-gray-300 font-medium mb-2">Email</label>
-                <input type="email" id="email" name="email" className="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required />
+                <input type="email" id="email" name="email" className="w-full px-4 py-2 bg-[#121212] border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D2B76B]" required />
               </div>
               <div className="mb-6">
                 <label htmlFor="message" className="block text-gray-300 font-medium mb-2">Message</label>
-                <textarea id="message" name="message" rows="5" className="w-full px-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
+                <textarea id="message" name="message" rows="5" className="w-full px-4 py-2 bg-[#121212] border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D2B76B]" required></textarea>
               </div>
-              <button type="submit" className="w-full bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-amber-700 transition duration-300">
+              <button type="submit" className="w-full bg-[#D2B76B] text-black hover:bg-[#d4b45a] cursor-pointer font-bold py-3 px-6 rounded-lg transition duration-300">
                 Submit
               </button>
             </form>
@@ -41,11 +41,15 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white">Email Us</h3>
-              <p className="text-gray-400 mt-2">ovaltiles@gmail.com</p>
+              <a href="mailto:ovaltiles@gmail.com" className="text-gray-400 hover:text-[#D2B76B] group-hover:underline ml-1">
+                  ovaltiles@gmail.com
+              </a>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white">Call Us</h3>
-              <p className="text-gray-400 mt-2">+92 321 4190776</p>
+              <a href="tel:+923214190776" className="text-gray-400 hover:text-[#D2B76B] group-hover:underline ml-1">
+                  +92 321 4190776
+              </a>
             </div>
             <div>
               <div className="w-full h-64 bg-gray-800 rounded-lg overflow-hidden relative">

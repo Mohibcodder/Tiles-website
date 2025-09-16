@@ -73,23 +73,23 @@ export default function ProductsClientLogic() {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-[#121212] min-h-screen text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Our Collection</h1>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Our <span className='text-[#D2B76B]'>Collection</span></h1>
           <p className="mt-4 text-lg text-gray-400">Discover our curated selection of premium surfaces.</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
           <aside className="w-full lg:w-1/4 xl:w-1/5">
-            <div className="sticky top-24 bg-gray-800 p-6 rounded-xl shadow-lg">
-              <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-3">Categories</h2>
+            <div className="sticky top-24 bg-[#1F1F1F] p-6 rounded-xl shadow-lg">
+              <h2 className="text-xl font-semibold mb-4 border-b border-[#D2B76B] pb-3">Categories</h2>
               <ul className="space-y-2">
                 {mainCategories.map(category => (
                   <li key={category}>
                     <button
                       onClick={() => handleCategoryClick(category)}
-                      className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-300 text-base font-medium ${activeCategory === category ? 'bg-blue-600 shadow-blue-500/30 shadow-lg' : 'hover:bg-gray-700'}`}
+                      className={`cursor-pointer w-full text-left px-4 py-3 rounded-lg transition-all duration-300 text-base font-medium ${activeCategory === category ? 'bg-[#D2B76B] shadow-[#D2B76B]/30 shadow-lg text-black' : 'hover:bg-[#ead7a48a]'}`}
                     >
                       {category}
                     </button>
@@ -106,19 +106,19 @@ export default function ProductsClientLogic() {
                 value={searchTerm}
                 onChange={handleSearchChange}
                 placeholder="Search by name, category, or type..."
-                className="w-full px-4 py-3 bg-gray-800 text-white border-2 border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="w-full px-4 py-3 bg-[#1F1F1F] text-white border-2 border-[#e8d29795] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D2B76B] focus:border-[#D2B76B] transition-all"
               />
             </div>
           
             {activeCategory && subFilterOptions.length > 0 && (
-              <div className="bg-gray-800 p-4 rounded-xl mb-8 shadow-lg">
+              <div className="bg-[#1F1F1F] p-4 rounded-xl mb-8 shadow-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-300">Refine Your Search</h3>
                 <div className="flex flex-wrap items-center gap-3">
                   {subFilterOptions.map(option => (
                     <button 
                       key={option}
                       onClick={() => handleSubFilterClick(option)}
-                      className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${activeSubFilter === option ? 'bg-blue-500 text-white shadow-md' : 'bg-gray-700 hover:bg-gray-600 text-gray-200'}`}
+                      className={`cursor-pointer px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${activeSubFilter === option ? 'bg-[#D2B76B] shadow-[#D2B76B]/30 shadow-lg text-black' : 'bg-[#ead7a48a] hover:bg-[#e3c4708a] text-gray-200'}`}
                     >
                       {option}
                     </button>
