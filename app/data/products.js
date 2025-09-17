@@ -95,6 +95,7 @@ export const products = [
       '/tile7.jpg',
      ],
   },
+ 
 
   // --- SANITARY ---
   {
@@ -172,5 +173,46 @@ export const products = [
     description: 'A classic Italian marble known for its soft white background and subtle grey veining.',
     image: '/flooring1.jpg',
     gallery: [ '/flooring1.jpg','/flooring2.jpg' ],
+  },
+  
+  // tiles
+
+ {
+    id: '12',
+    name: 'Graphite Glow Collection',
+    mainCategory: 'Tiles',
+    // price: 28.99,
+    subCategory: ['Concrete Look','Wall Tiles'],
+    // tags: ['Glossy', 'Kitchen', 'Home', 'Classic'],
+    size: '60x120 cm',
+    description: 'The Graphite Glow Collection brings together modern elegance and subtle luxury. Featuring soft silver grey, bold charcoal, and a striking mosaic with golden highlights, this series is designed to create a perfect balance of simplicity and style. Its versatile shades suit both light and dark themes, while the golden accents add a touch of premium sophistication. Ideal for accent walls, living spaces, kitchens, and bathrooms, this collection transforms any space into a contemporary masterpiece.',
+    image: '/id12_main.jpg',
+    gallery: [
+      '/id12_main.jpg',
+      '/id12_gallery1.jpg',
+      '/id12_gallery2.jpg',
+      '/id12_gallery3.jpg',
+      '/id12_gallery4.jpg',
+     
+    ],
+  },
+
+ {
+    id: '13',
+    name: 'Marble Essence',
+    mainCategory: 'Tiles',
+    // price: 28.99,
+    subCategory: ['Wall Tiles'],
+    // tags: ['Glossy', 'Kitchen', 'Home', 'Classic'],
+    size: '60x120 cm',
+    description: 'The Marble Essence brings together modern elegance and subtle luxury. Featuring soft silver grey, bold charcoal, and a striking mosaic with golden highlights, this series is designed to create a perfect balance of simplicity and style. Its versatile shades suit both light and dark themes, while the golden accents add a touch of premium sophistication. Ideal for accent walls, living spaces, kitchens, and bathrooms, this collection transforms any space into a contemporary masterpiece.',
+    image: '/id13_main.jpg',
+    gallery: [
+      '/id13_main.jpg',
+      '/id13_gallery1.jpg',
+      '/id13_gallery2.jpg',
+      '/id13_gallery3.jpg',
+ 
+    ],
   },
 ];
