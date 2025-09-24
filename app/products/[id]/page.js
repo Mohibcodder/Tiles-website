@@ -111,7 +111,7 @@ const relatedProducts = products.filter(
           {/* --- PRODUCT INFO --- */}
           <div className="text-white">
             <h1 className="text-3xl md:text-4xl font-bold">{product.name}</h1>
-            <p className="text-2xl font-semibold text-[#D2B76B] mt-4">{product.price}</p>
+            {/* <p className="text-2xl font-semibold text-[#D2B76B] mt-4">{product.price}</p> */}
             <p className="text-gray-300 mt-6 leading-relaxed">{product.description}</p>
             
             <div className="mt-8 border-t border-[#D2B76B] pt-6">

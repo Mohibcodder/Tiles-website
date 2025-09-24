@@ -215,4 +215,38 @@ export const products = [
  
     ],
   },
+   {
+    id: '14',
+    name: 'Modern Commodes',
+    mainCategory: 'Sanitary',
+    // price: 250.00,
+    subCategory: 'Commode', // Specific type for filtering
+    // tags: ['Modern', 'Space Saving'],
+    size: 'Standard',
+    description: 'A sleek and modern wall-hung commode that saves space and offers a contemporary look.',
+    image: '/commode4.jpg',
+    gallery: [ 
+      '/commode4.jpg',
+      '/commode5.jpg',
+      '/commode6.jpg',
+      '/commode7.jpg'
+     ],
+  },
+   {
+    id: '15',
+    name: 'AquaElite | Premium Bath & Kitchen Taps',
+    mainCategory: 'Sanitary',
+    // price: 250.00,
+    subCategory: 'Tap', // Specific type for filtering
+    // tags: ['Modern', 'Space Saving'],
+    size: 'Standard',
+    description: 'AquaElite taps & shower fittings luxury aur durability ka perfect combination hain. High-quality brass aur chrome finishing ke sath yeh taps aapke bathroom aur kitchen ko ek modern aur stylish look dete hain. Rust-proof aur long-lasting material Smooth water flow aur leak-proof design Available in multiple designs  classic, modern, aur luxury gold finish Suitable for bathrooms, kitchens aur wash basins In fittings ke zariye aap apne ghar ko ek premium aur elegant touch de sakte hain.',
+    image: '/tap1.jpg',
+    gallery: [ 
+      '/tap1.jpg',
+      '/tap2.jpg',
+      '/tap3.jpg',
+  
+     ],
+  },
 ];
