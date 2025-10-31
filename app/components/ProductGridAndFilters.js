@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation'; 
+import { useSearchParams } from 'next/navigation';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
 
@@ -15,12 +15,12 @@ export default function ProductsClientLogic() {
 
   // --- DYNAMIC FILTER OPTIONS ---
   const mainCategories = [...new Set(products.map(p => p.mainCategory))];
-  
+
   let subFilterOptions = [];
   if (activeCategory) {
     const allSubCategories = products
       .filter(p => p.mainCategory === activeCategory)
-      .map(p => p.subCategory);
+      .flatMap(p => Array.isArray(p.subCategory) ? p.subCategory : [p.subCategory]); // ✅ support array
     subFilterOptions = [...new Set(allSubCategories)];
   }
 
@@ -40,19 +40,27 @@ export default function ProductsClientLogic() {
     if (activeCategory) {
       tempProducts = tempProducts.filter(p => p.mainCategory === activeCategory);
     }
-    
+
     if (activeSubFilter) {
-      tempProducts = tempProducts.filter(p => p.subCategory === activeSubFilter);
+      tempProducts = tempProducts.filter(p =>
+        Array.isArray(p.subCategory)
+          ? p.subCategory.includes(activeSubFilter)  // ✅ agar array hai
+          : p.subCategory === activeSubFilter       // ✅ agar string hai
+      );
     }
 
     if (searchTerm) {
       const lowercasedTerm = searchTerm.toLowerCase();
-      tempProducts = tempProducts.filter(product => 
-        product.name.toLowerCase().includes(lowercasedTerm) ||
-        product.mainCategory.toLowerCase().includes(lowercasedTerm) ||
-        product.subCategory.toLowerCase().includes(lowercasedTerm)
-      );
+      tempProducts = tempProducts.filter(product => {
+        const subCats = Array.isArray(product.subCategory) ? product.subCategory : [product.subCategory];
+        return (
+          product.name.toLowerCase().includes(lowercasedTerm) ||
+          product.mainCategory.toLowerCase().includes(lowercasedTerm) ||
+          subCats.some(sub => sub.toLowerCase().includes(lowercasedTerm)) // ✅ array ke liye
+        );
+      });
     }
+
 
     setFilteredProducts(tempProducts);
 
@@ -67,7 +75,7 @@ export default function ProductsClientLogic() {
   const handleSubFilterClick = (filter) => {
     setActiveSubFilter(prev => prev === filter ? '' : filter);
   };
-  
+
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -109,13 +117,13 @@ export default function ProductsClientLogic() {
                 className="w-full px-4 py-3 bg-[#1F1F1F] text-white border-2 border-[#e8d29795] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D2B76B] focus:border-[#D2B76B] transition-all"
               />
             </div>
-          
+
             {activeCategory && subFilterOptions.length > 0 && (
               <div className="bg-[#1F1F1F] p-4 rounded-xl mb-8 shadow-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-300">Refine Your Search</h3>
                 <div className="flex flex-wrap items-center gap-3">
                   {subFilterOptions.map(option => (
-                    <button 
+                    <button
                       key={option}
                       onClick={() => handleSubFilterClick(option)}
                       className={`cursor-pointer px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${activeSubFilter === option ? 'bg-[#D2B76B] shadow-[#D2B76B]/30 shadow-lg text-black' : 'bg-[#ead7a48a] hover:bg-[#e3c4708a] text-gray-200'}`}
@@ -126,7 +134,7 @@ export default function ProductsClientLogic() {
                 </div>
               </div>
             )}
-            
+
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
                 {filteredProducts.map((product) => (

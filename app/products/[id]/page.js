@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import ProductCard from '../../components/ProductCard'; // 1. IMPORT ProductCard
 import { products } from '../../data/products';
 
 export default function ProductDetailPage() {
@@ -66,6 +67,10 @@ export default function ProductDetailPage() {
     );
   }
 
+// Yeh nayi line hai
+const relatedProducts = products.filter(
+  p => p.mainCategory === product.mainCategory && p.id !== product.id
+);
   return (
     <div className="bg-[#1F1F1F] py-12 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,7 +111,7 @@ export default function ProductDetailPage() {
           {/* --- PRODUCT INFO --- */}
           <div className="text-white">
             <h1 className="text-3xl md:text-4xl font-bold">{product.name}</h1>
-            <p className="text-2xl font-semibold text-[#D2B76B] mt-4">{product.price}</p>
+            {/* <p className="text-2xl font-semibold text-[#D2B76B] mt-4">{product.price}</p> */}
             <p className="text-gray-300 mt-6 leading-relaxed">{product.description}</p>
             
             <div className="mt-8 border-t border-[#D2B76B] pt-6">
@@ -131,6 +136,17 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
+               {/* --- ✅ 3. NEW: RELATED PRODUCTS SECTION --- */}
+        {relatedProducts.length > 0 && (
+          <div className="mt-24 border-t border-gray-700 pt-12">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {relatedProducts.map((relatedProduct) => (
+                <ProductCard key={relatedProduct.id} product={relatedProduct} />
+              ))}
+            </div>
+          </div>
+        )}
       {/* --- ✅ NEW: LIGHTBOX MODAL --- */}
       {isLightboxOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">

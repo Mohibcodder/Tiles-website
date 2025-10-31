@@ -95,6 +95,7 @@ export const products = [
       '/tile7.jpg',
      ],
   },
+ 
 
   // --- SANITARY ---
   {
@@ -143,5 +144,34 @@ export const products = [
       '/bathtubs2.jpg',
       
      ],
-  }
+  },
+
+  // --- MARBLE & STONE ---
+  {
+    id: '10',
+    name: 'Black Marquina Marble Slab',
+    mainCategory: 'Marble & Stone',
+    price: 150.00,
+    subCategory: 'Slab', // Specific type for filtering
+    // tags: ['Luxury', 'Countertop'],
+    size: 'Per Sq. Ft.',
+    description: 'A dramatic and bold black marble with striking white veining, perfect for luxurious kitchen countertops.',
+    image: '/slab1.jpg',
+    gallery: [ 
+      '/slab1.jpg',
+      '/slab2.jpg'
+    ],
+  },
+  {
+    id: '11',
+    name: 'Italian Carrara Flooring',
+    mainCategory: 'Marble & Stone',
+    price: 135.00,
+    subCategory: 'Flooring', // Specific type for filtering
+    // tags: ['Classic', 'Elegant'],
+    size: 'Per Sq. Ft.',
+    description: 'A classic Italian marble known for its soft white background and subtle grey veining.',
+    image: '/flooring1.jpg',
+    gallery: [ '/flooring1.jpg','/flooring2.jpg' ],
+  },
 ];
