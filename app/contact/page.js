@@ -37,12 +37,12 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-white">Visit Our Showroom</h3>
-              <p className="text-gray-400 mt-2">Ferozpur Road, Lahore</p>
+              <p className="text-gray-400 mt-2">170-Main Ferozepur Shah jamal more ichhra , Lahore</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white">Email Us</h3>
               <a href="mailto:ovaltiles@gmail.com" className="text-gray-400 hover:text-[#D2B76B] group-hover:underline ml-1">
-                  ovaltiles@gmail.com
+                  homegallery776@gmail.com
               </a>
             </div>
             <div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
             <div>
               <div className="w-full h-64 bg-gray-800 rounded-lg overflow-hidden relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27218.6819020243!2d74.2933416!3d31.4826352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904d6f2b72e73%3A0xeca0f3a2e9477b9!2sFerozepur%20Rd%2C%20Lahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1693412312345"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.795984221446!2d74.3190451747542!3d31.529762874209673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190591baa300c1%3A0xd1f955a7ed25d747!2sHome%20Gallery%20Tiles%20and%20Sanitary!5e0!3m2!1sen!2s!4v1761904662549!5m2!1sen!2s"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -57,7 +57,7 @@ export default function HeroSection() {
     <div className="relative bg-[#1F1F1F] h-[70vh] min-h-[600px] overflow-hidden">
       
       {/* 5. Replaced static image with the animation */}
-      <div className="absolute left-1/2 top-1/2 h-[230%] w-[200%] -translate-x-1/2 -translate-y-1/2 opacity-[0.09] pointer-events-none rotate-45 z-0">
+      <div className="absolute left-1/2 top-1/2 h-[230%] w-[200%] -translate-x-1/2 -translate-y-1/2 opacity-[0.4] pointer-events-none rotate-45 z-0">
         <div className="flex h-full w-full gap-2">
             <ImageColumn images={imagesCol1} animationClass="[animation:scrollDown_40s_linear_infinite]" />
             <ImageColumn images={imagesCol2} animationClass="[animation:scrollUp_40s_linear_infinite]" />
@@ -78,7 +78,7 @@ export default function HeroSection() {
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-start text-left z-20">
         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl max-w-2xl">
-          Crafting Spaces, <span className="text-[#D2B76B]">One Tile at a Time</span>
+          Crafting Spaces, <span className="text-[#D2B76B] font-serif">One Tile at a Time</span>
         </h1>
         <p className="mt-6 max-w-xl text-xl text-gray-200">
           Discover a curated collection of the world&apos;s finest tiles, designed to bring your vision of luxury and elegance to life.
@@ -94,7 +94,7 @@ export default function HeroSection() {
           />
           <button 
             type="submit"
-            className="bg-[#D2B76B] cursor-pointer text-black font-bold py-3 px-8 rounded-r-lg hover:bg-[#d4b45a] transition duration-300 text-lg"
+            className="bg-[#D2B76B] cursor-pointer text-black font-serif font-extrabold py-3 px-8 rounded-r-lg hover:bg-[#d4b45a] transition duration-300 text-lg"
           >
             Search Product
           </button>

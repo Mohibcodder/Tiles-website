@@ -16,8 +16,7 @@ export default function ProductCard({ product }) {
         <div className="p-4">
           <h3 className="text-lg font-semibold text-white truncate">{product.name}</h3>
           <p className="text-gray-400 mt-1">{product.category}</p>
-          <div className="mt-4 flex justify-between items-center">
-            <p className="text-xl font-bold text-white">${product.price}</p>
+          <div className="mt-4 flex justify-end items-center">
             <span className="text-[#D2B76B] font-semibold">View Details &rarr;</span>
           </div>
         </div>

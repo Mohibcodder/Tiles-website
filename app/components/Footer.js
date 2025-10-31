@@ -72,11 +72,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-200">Contact Us</h4>
             <ul className="mt-4 space-y-2">
-              <li className="text-gray-300 hover:text-[#D2B76B]">Ferozpur Road, Lahore</li>
+              <li className="text-gray-300 hover:text-[#D2B76B]">170-Main Ferozepur Shah jamal more ichhra , Lahore</li>
               <li className="text-gray-300 group">
                 Email :
                 <a href="mailto:ovaltiles@gmail.com" className="hover:text-[#D2B76B] group-hover:underline ml-1">
-                  ovaltiles@gmail.com
+                  homegallery776@gmail.com
                 </a>
               </li>
               <li className="text-gray-300 group">
@@ -94,10 +94,10 @@ export default function Footer() {
               <a href="https://www.facebook.com/profile.php?id=61579746032696" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#D2B76B]">
                 <FaFacebookF />
               </a>
-              <a href="https://www.instagram.com/ovaltiles/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#D2B76B]">
+              <a href="https://www.instagram.com/homegallery776/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#D2B76B]">
                 <FaInstagram />
               </a>
-              <a href="https://www.tiktok.com/@ovaltiles" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#D2B76B]">
+              <a href="https://www.tiktok.com/@homegallery776" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#D2B76B]">
                 <FaTiktok />
               </a>
             </div>
@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-[#3e3e3e] pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} <span className='text-[#D2B76B]'>Oval Tiles</span>. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <span className='text-[#D2B76B]'>Home Gallery</span>. All rights reserved.</p>
         </div>
       </div>
     </footer>

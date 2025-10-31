@@ -27,7 +27,6 @@ export default function Navbar() {
                 alt="Oval Tiles Logo"
                 className="h-12 w-auto"
               />
-              <h1 className="text-white text-xl font-bold ml-3">Oval Tiles</h1>
             </Link>
           </div>
 

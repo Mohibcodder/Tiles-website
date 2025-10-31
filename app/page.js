@@ -24,7 +24,7 @@ export default function HomePage() {
   const featuredProducts = products.slice(0, 3);
 
   return (
-    <div>
+    <div className='font-serif'>
       <HeroSection />
 
       {/* Featured Products Section */}
